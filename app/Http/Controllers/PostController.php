@@ -22,18 +22,19 @@ class PostController extends Controller
     public function saveContact(Request $request)
     {  
         $request->validate([
-            'firstName' => 'required',
-            'lastName' => 'required',
+            'firstName' => 'required|alpha',
+            'lastName' => 'required|alpha',
             'email' => 'required|email',
-            'phone' => 'required',
+            'phone' => 'required|digits_between:9,10 ',
             'message' => 'required'
         ]);
         
         $data = $request->all();
         $check = $this->create($data);
          
-        return back()->with('success', 'Thank you for contact us!');
-        //return redirect("contact")->withSuccess('Great! You have Successfully sent');  |unique:users
+        // return back()->with('success', 'Thank you for contact us!');  max:10
+        return redirect("contact")->withSuccess('Great! You have Successfully sent'); 
+        //  |unique:users
         
     }
 

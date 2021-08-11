@@ -34,16 +34,24 @@
                 </div>
                 <div class="contactForm">
                 <form method="POST" action="contact">
+                    
                     @csrf
                     <h2>Send a Message</h2>
                     <div class="formBox">
+                        
                         <div class="inputBox w50">
                             <input id="fname" type="text" name="firstName" required>
                             <span>First Name</span>
+                            <div class="error">
+                                {{$errors->first('firstName')}}
+                            </div>
                         </div>
                         <div class="inputBox w50">
                             <input id="lname" type="text" name="lastName" required>
                             <span>Last Name</span>
+                            <div class="error">
+                                {{$errors->first('lastName')}}
+                            </div>
                         </div>
                         <div class="inputBox w50">
                             <input id="email" type="email" name="email" required>
@@ -52,6 +60,9 @@
                         <div class="inputBox w50">
                             <input id="pno" type="text" name="phone" required>
                             <span>Mobile Number</span>
+                            <div class="error">
+                                {{$errors->first('phone')}}
+                            </div>
                         </div>
                         <div class="inputBox w100">
                             <textarea name="message" required></textarea>

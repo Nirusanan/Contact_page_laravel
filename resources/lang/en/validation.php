@@ -135,6 +135,13 @@ return [
         ],
     ],
 
+    'custom' => [ 
+        'phone' => [
+            'required' => 'We need to know your phone number',
+            'digits_between' => 'We need 10 numbers!',
+        ],
+    ],
+
     /*
     |--------------------------------------------------------------------------
     | Custom Validation Attributes

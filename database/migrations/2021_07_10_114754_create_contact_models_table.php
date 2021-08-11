@@ -17,7 +17,7 @@ class CreateContactModelsTable extends Migration
             $table->id();
             $table->string('firstName');
             $table->string('lastName');
-            $table->string('email')->unique();
+            $table->string('email');
             $table->string('phone');
             $table->string('message');
             $table->timestamps();

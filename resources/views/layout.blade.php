@@ -141,9 +141,14 @@ section::before
     position: relative;
     margin-bottom: 35px;
 }
-.container .contactForm .formBox .inputBox.w50
+.container .contactForm .formBox .inputBox.w50 
 {
     width: 47%;
+}
+.container .contactForm .formBox .inputBox.w50 .error
+{
+    width: 47%;
+    color: red;
 }
 .container .contactForm .formBox .inputBox.w100
 {
